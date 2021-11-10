@@ -1,3 +1,4 @@
+var PERSEUS_PREFIX = "";
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// install a JSONP callback for chunk loading
 /******/ 	var parentJsonpFunction = window["webpackJsonp"];
@@ -72,7 +73,7 @@
 /******/ 			script.type = 'text/javascript';
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
-/******/ 			script.src = "assets/perseus/" + __webpack_require__.p + "" + chunkId + "." + ({"1":"extra-widgets"}[chunkId]||chunkId) + ".js";
+/******/ 			script.src = PERSEUS_PREFIX + __webpack_require__.p + "" + chunkId + "." + ({"1":"extra-widgets"}[chunkId]||chunkId) + ".js";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -9095,7 +9096,7 @@
 	function defaultPreloader() {
 	    return React.DOM.span({
 	        style: {
-	            background: "url(/images/spinner.gif) no-repeat",
+	            background: "url(" + PERSEUS_PREFIX + "stylesheets/www.khanacademy.org/images/spinner.gif) no-repeat",
 	            backgroundPosition: "center",
 	            width: "100%",
 	            height: "100%",
